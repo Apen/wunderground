@@ -12,6 +12,7 @@ Usage
 	
 	// cache dir
 	$weather->setCacheDir(MY_PATH . 'temp/');
+	$weather->setCacheExpiry(3600);
 	
 	// get current weather
 	$weather->getCurrentWeather($city, $country);
