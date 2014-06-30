@@ -139,7 +139,7 @@ class Wunderground
 		$filename = $this->getFilename($method, $city, $country);
 		if (file_exists($filename)) {
 			$expiry = filectime($filename) + $this->cacheExpiry;
-			if ($expiry > mktime()) {
+			if ($expiry > time()) {
 				return file_get_contents($filename);
 			} else {
 				return NULL;
